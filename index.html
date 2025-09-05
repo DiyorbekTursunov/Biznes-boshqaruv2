@@ -1,12 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Critical CSS inlined (only for above-the-fold: body, wrapper, header, hero, and essential media queries) -->
     <style>
-*{box-sizing:border-box;margin:0;padding:0}.wrapper,body{background-color:#000;font-family:sans-serif}.hero__button,.hero__title,.subtitle__highlight{font-weight:700}.hero__person,.hero__person-img,.mobile{position:relative}body{color:#fff}.container{max-width:1160px;margin:0 auto}.wrapper{background:linear-gradient(180deg,rgba(25,38,52,0) 0%,#000000 100%);padding-top:10px;background-position:center;background-size:cover;background-repeat:no-repeat;z-index:-1}.header{margin:0 10px 10px}.header-container{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;backdrop-filter:blur(100px);border:1px solid #fff;border-radius:10px}.header__contact,.header__date-info{display:flex;flex-direction:column}.header__date-info{justify-content:center}.header__contact-icon,.header__date-label{font-size:12px;margin-bottom:8px}.header__date-label{text-align:center}.header__contact-icon{text-align:end}.header__date-value,.header__phone{font-weight:700;font-size:20px;color:#fcca4c}.header__phone{text-decoration:none}.header__logo{display:flex}.hero{margin:0 10px}.hero-container{display:flex;gap:60px;align-items:end}.hero__content{display:flex;flex-direction:column;align-items:start}.hero__title{font-size:56px;line-height:150%;margin-bottom:8px}.hero__highlight{background:url("../images/hero-highlight.avif") 0 0/contain no-repeat;font-style:italic;padding:5px 10px 13px 5px}.hero__subtitle{font-size:32px;line-height:150%;margin-bottom:35px}.hero__button{background:#fcca4c;color:#000;padding:43px;width:100%;max-width:380px;border-radius:15px;border:none;cursor:pointer;font-size:24px;letter-spacing:10%}.mobile{display:none;margin:-55px auto 0;z-index:3}.hero__person-img{width:100%;max-width:444px;height:396px;z-index:2}@media screen and (max-width:568px){.header__logo{display:none}.header__date-value,.header__phone{font-size:18px}.header__contact-icon,.header__date-label{margin-bottom:4px}}@media screen and (max-width:950px){.hero-container{gap:30px}.hero__title{font-size:40px}.hero__subtitle{font-size:24px;margin-bottom:20px}.hero__button{padding:30px;font-size:20px;max-width:300px}.hero__person-img{max-width:350px}.users__title{font-size:32px!important}}@media screen and (max-width:600px){.desctop{display:none}.mobile{display:block}.header{margin-bottom:40px}.hero-container{flex-direction:column;align-items:center;text-align:center;gap:0}.hero__content{align-items:center}.hero__title{font-size:32px}.hero__subtitle{font-size:20px;margin-bottom:0}.hero__button{padding:25px;font-size:18px;max-width:280px}.hero__person-img{max-width:300px;margin-top:20px}.hero__subtitle{font-size:18px}}@media screen and (max-width:350px){.header__date-value,.header__phone{font-size:14px}.hero__title{font-size:28px}.header__contact-icon,.header__date-label{margin-bottom:4px;font-size:10px}.hero__highlight{padding:6px 15px 6px 6px;width:100%}.hero__subtitle{font-size:16px}}button{cursor:pointer;border:none;border-radius:6px}@media (max-width:600px){.wrapper{background-image:url("./images/main-person-mobile.avif")}}@media (min-width:601px){.wrapper{background-image:url("./images/desctop-main.avif")}}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        .wrapper,
+        body {
+            background-color: #000;
+            font-family: sans-serif
+        }
+
+        .hero__button,
+        .hero__title,
+        .subtitle__highlight {
+            text-decoration: none;
+            font-weight: 700;
+            position: relative;
+            z-index: 99999;
+        }
+
+        .hero__person,
+        .hero__person-img,
+        .mobile {
+            position: relative;
+        }
+
+        body {
+            color: #fff
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto
+        }
+
+        .wrapper {
+            padding-top: 10px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            position: relative;
+        }
+
+        .liner-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .hero__person-img-mobile {
+            display: none;
+        }
+
+        .header {
+            margin: 0 10px 10px
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            backdrop-filter: blur(100px);
+            border: 1px solid #fff;
+            border-radius: 10px
+        }
+
+        .header__contact,
+        .header__date-info {
+            display: flex;
+            flex-direction: column
+        }
+
+        .header__date-info {
+            justify-content: center
+        }
+
+        .header__contact-icon,
+        .header__date-label {
+            font-size: 12px;
+            margin-bottom: 8px
+        }
+
+        .header__date-label {
+            text-align: center
+        }
+
+        .header__contact-icon {
+            text-align: end
+        }
+
+        .header__date-value,
+        .header__phone {
+            font-weight: 700;
+            font-size: 20px;
+            color: #fcca4c
+        }
+
+        .header__phone {
+            text-decoration: none
+        }
+
+        .header__logo {
+            display: flex
+        }
+
+        .hero {
+            margin: 0 10px;
+        }
+
+        .hero-container {
+            display: flex;
+            gap: 60px;
+            align-items: end
+        }
+
+        .hero__content {
+            display: flex;
+            flex-direction: column;
+            align-items: start
+        }
+
+        .hero__title {
+            font-size: 56px;
+            line-height: 150%;
+            margin-bottom: 8px
+        }
+
+        .hero__highlight {
+            background: url("../images/hero-highlight.avif") 0 0/contain no-repeat;
+            font-style: italic;
+            padding: 5px 10px 13px 5px
+        }
+
+        .hero__subtitle {
+            font-size: 32px;
+            line-height: 150%;
+            margin-bottom: 35px
+        }
+
+        .hero__button {
+            background: #fcca4c;
+            color: #000;
+            padding: 43px;
+            width: 100%;
+            max-width: 380px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            letter-spacing: 10%
+        }
+
+        .mobile {
+            display: none;
+            margin: -55px auto 0;
+            z-index: 3
+        }
+
+        .hero__person-img {
+            width: 100%;
+            max-width: 444px;
+            height: 396px;
+            z-index: 2;
+            object-fit: contain;
+        }
+
+        .desctop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width:568px) {
+            .header__logo {
+                display: none
+            }
+
+            .header__date-value,
+            .header__phone {
+                font-size: 18px
+            }
+
+            .header__contact-icon,
+            .header__date-label {
+                margin-bottom: 4px
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .hero-container {
+                gap: 30px
+            }
+
+            .hero__title {
+                font-size: 40px
+            }
+
+            .hero__subtitle {
+                font-size: 24px;
+                margin-bottom: 20px
+            }
+
+            .hero__button {
+                padding: 30px;
+                font-size: 20px;
+                max-width: 300px
+            }
+
+            .hero__person-img {
+                display: none;
+            }
+
+            .hero__person-img-mobile {
+                display: block;
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .users__title {
+                font-size: 32px !important
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .desctop {
+                display: none
+            }
+
+            .mobile {
+                display: block
+            }
+
+            .header {
+                margin-bottom: 40px
+            }
+
+            .hero-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 0
+            }
+
+            .hero__content {
+                align-items: center
+            }
+
+            .hero__title {
+                font-size: 32px
+            }
+
+            .hero__subtitle {
+                font-size: 20px;
+                margin-bottom: 0
+            }
+
+            .hero__button {
+                padding: 25px;
+                font-size: 18px;
+                max-width: 280px
+            }
+
+            .hero__person-img {
+                max-width: 500px;
+                margin-top: 20px
+            }
+
+            .hero__subtitle {
+                font-size: 18px
+            }
+        }
+
+        @media screen and (max-width:350px) {
+
+            .header__date-value,
+            .header__phone {
+                font-size: 14px
+            }
+
+            .hero__title {
+                font-size: 28px
+            }
+
+            .header__contact-icon,
+            .header__date-label {
+                margin-bottom: 4px;
+                font-size: 10px
+            }
+
+            .hero__highlight {
+                padding: 6px 15px 6px 6px;
+                width: 100%
+            }
+
+            .hero__subtitle {
+                font-size: 16px
+            }
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            border-radius: 6px
+        }
+
+        @media (max-width:600px) {
+            .wrapper {
+                background-image: url("./images/main-person-mobile.avif");
+            }
+        }
+
+        @media (min-width:601px) {
+            .wrapper {
+                background-image: url("./images/desctop-main.avif")
+            }
+        }
     </style>
     <!-- Preload most critical image -->
     <link rel="preload" as="image" href="./images/main-person-desctop.avif" type="image/avif">
@@ -17,6 +339,7 @@
         <link rel="stylesheet" href="./css/main.css">
     </noscript>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
@@ -49,15 +372,18 @@
                         <span class="subtitle__highlight">ходимларингиз</span> мотивациясини <br />
                         оширинг ва фойдани <span class="subtitle__highlight">+20%га кўтаринг</span>
                     </p>
-                    <button class="desctop hero__button">БОҒЛАНИШ</button>
+                    <a href="#form" class="desctop hero__button">БОҒЛАНИШ</a>
                 </div>
                 <div class="hero__person">
                     <img class="hero__person-img" decoding="async" src="./images/main-person-desctop.avif"
                         alt="Мухамедов Абдулазиз" width="444" height="550" loading="eager">
-                    <button class="mobile hero__button">БОҒЛАНИШ</button>
+                    <img class="hero__person-img-mobile" decoding="async" src="./images/main-person-desctop2.avif"
+                        alt="Мухамедов Абдулазиз" width="444" height="550" loading="eager">
+                    <a href="#form" class="mobile hero__button">БОҒЛАНИШ</a>
                 </div>
             </div>
         </section>
+        <img class="liner-bg" src="./images/liner-bg.avif" alt="">
     </div>
     <section class="users">
         <div class="users__container">
@@ -128,7 +454,7 @@
                         <li class="programs__item">
                             Aмалий машғулот: Ишлаб чиқариш симуляцияси (1- ва 2-тур)
                         </li>
-                        <img class="programs__item__img" src="./images/01.png" alt="" loading="lazy">
+                        <img class="programs__item__img" src="./images/01.avif" alt="" loading="lazy">
                     </ul>
                 </div>
 
@@ -168,61 +494,39 @@
                         <li class="programs__item">
                             Компанияда рақамлаштириш лойиҳаларини амалга ошириш
                         </li>
-                        <img class="programs__item__img" src="./images/02.png" alt="" loading="lazy">
+                        <img class="programs__item__img" src="./images/02.avif" alt="" loading="lazy">
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section class="supported">
-        <div class="supported__container">
-            <h2 class="supported__title">БИЗ ҚЎЛЛАБ- <span>ҚУВВАТЛАГАН БИЗНЕСЛАР</span></h2>
-            <div class="carousel">
-                <div class="track">
-                    <!-- Birinchi guruh -->
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <!-- Ikkinchi guruh (duplicate for seamless loop) -->
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                    <img src="./images/devops.avif" alt="devops" width="100" height="100" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="testimonials">
-        <div class="testimonials__container">
+    <section class="partners">
+        <div class="partners__container">
             <h2 class="testimonials__title">ДАСТУР ҲАҚИДА <span>ИШТИРОКЧИЛАР ФИКРИ</span></h2>
-            <div class="testimonials__box">
-                <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images"
-                        data-video="https://www.youtube.com/watch?v=j6oFjT1ufG8" width="280" height="402"
-                        loading="lazy">
-                </div>
-                <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images"
-                        data-video="https://www.youtube.com/watch?v=iK7UUHOfPeA" width="280" height="402"
-                        loading="lazy">
-                </div>
-                <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images"
-                        data-video="https://www.youtube.com/watch?v=LKogJpqsejw" width="280" height="402"
-                        loading="lazy">
-                </div>
-                <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images"
-                        data-video="https://www.youtube.com/watch?v=lu8Y01biVmo" width="280" height="402"
-                        loading="lazy">
-                </div>
+        </div>
+        <div class="logos-wrapper">
+            <div class="partners__logos">
+                <img src="./images/logos/uzpost.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/ipakyoli.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/davrbank.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/muza.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/gef.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/unido.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/tbc.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/infiny.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/uzpost.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/ipakyoli.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/davrbank.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/muza.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/gef.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/unido.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/tbc.avif" alt="logo" loading="lazy">
+                <img src="./images/logos/infiny.avif" alt="logo" loading="lazy">
             </div>
         </div>
     </section>
-    <section class="question">
+
+    <section class="question" id="form">
         <div class="question__container">
             <div class="question__info">
                 <h3 class="question__info-title">Ҳали ҳам саволингиз борми?</h3>
@@ -232,24 +536,20 @@
                     Telegramdan yozish
                 </button>
             </div>
-            <form class="question__form">
+            <form class="question__form" id="contactForm">
                 <h4 class="question__form-title">Ma’lumotlaringизni qoldiring</h4>
                 <div class="question__form-card">
-                    <input required class="question__form-inp" type="text" placeholder="Ismingiz">
-                    <input required class="question__form-inp" type="number" placeholder="Telefon raqamingiz">
+                    <input required class="question__form-inp" id="nameInput" type="text" placeholder="Ismingiz">
+                    <input required class="question__form-inp" id="businessInput" type="test"
+                        placeholder="Bizners turi">
+                    <input class="question__form-inp" id="phoneInput" required type="tel"
+                        placeholder="+998 (__)-___-__-__">
+                    <!-- <input required class="question__form-inp" value="+998" id="phoneInput" type="number" placeholder="Telefon raqamingiz"> -->
                 </div>
-                <button class="question__form-btn">Yuborish</button>
+                <button class="question__form-btn" type="submit">Yuborish</button>
             </form>
         </div>
     </section>
-    <!-- Optimized scripts -->
-    <script defer>
-        if ('fonts' in document) {
-            document.fonts.ready.then(() => {
-                document.body.classList.add('fonts-loaded');
-            });
-        }
-    </script>
     <script defer src="./js/app.js"></script>
     <script>
         const cards = document.querySelectorAll(".testimonials__card");
@@ -281,4 +581,5 @@
         });
     </script>
 </body>
+
 </html>
