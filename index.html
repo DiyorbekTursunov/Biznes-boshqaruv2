@@ -8,6 +8,12 @@
 
     <!-- Critical CSS inlined for immediate rendering -->
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         .wrapper,
         body {
             background-color: #000;
@@ -239,6 +245,10 @@
                 max-width: 300px;
                 margin-top: 20px
             }
+
+            .hero__subtitle {
+                font-size: 18px
+            }
         }
 
         @media screen and (max-width:350px) {
@@ -261,6 +271,10 @@
             .hero__highlight {
                 padding: 6px 15px 6px 6px;
                 width: 100%
+            }
+
+            .hero__subtitle {
+                font-size: 16px
             }
         }
     </style>
