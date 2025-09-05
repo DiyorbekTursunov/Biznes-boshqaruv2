@@ -122,3 +122,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.querySelectorAll('.hero__button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default to handle manually
+        const formSection = document.querySelector('#form');
+        if (formSection) {
+            formSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            console.error('Section with id="form" not found');
+        }
+    });
+});

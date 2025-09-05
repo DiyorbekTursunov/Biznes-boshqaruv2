@@ -26,6 +26,7 @@
             font-weight: 700;
             position: relative;
             z-index: 99999;
+            pointer-events: auto; /* Ensure clicks are registered */
         }
 
         .hero__person,
@@ -48,7 +49,7 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            z-index: -1;
+            /* z-index: -1; */
             position: relative;
         }
 
@@ -145,6 +146,7 @@
         }
 
         .hero__subtitle {
+            max-width: 331px;
             font-size: 32px;
             line-height: 150%;
             margin-bottom: 35px
@@ -246,7 +248,7 @@
             }
 
             .header {
-                margin-bottom: 40px
+                margin-bottom: 10px
             }
 
             .hero-container {
@@ -281,7 +283,9 @@
             }
 
             .hero__subtitle {
-                font-size: 18px
+                max-width: 500px;
+                font-size: 13px;
+                margin-bottom: 15px;
             }
         }
 
@@ -368,8 +372,8 @@
                         <span class="hero__highlight">ТИЗИМЛАШТИРИШ</span>
                     </h1>
                     <p class="hero__subtitle">
-                        Бизнесингизни <span class="subtitle__highlight">тизимга</span> солинг, <br />
-                        <span class="subtitle__highlight">ходимларингиз</span> мотивациясини <br />
+                        Бизнесингизни <span class="subtitle__highlight">тизимга</span> солинг,
+                        <span class="subtitle__highlight">ходимларингиз</span> мотивациясини
                         оширинг ва фойдани <span class="subtitle__highlight">+20%га кўтаринг</span>
                     </p>
                     <a href="#form" class="desctop hero__button">БОҒЛАНИШ</a>
@@ -529,7 +533,7 @@
     <section class="question" id="form">
         <div class="question__container">
             <div class="question__info">
-                <h3 class="question__info-title">Ҳали ҳам саволингиз борми?</h3>
+                <h3 class="question__info-title">Ҳали ҳам <br> саволингиз борми?</h3>
                 <p class="question__info-text">Менежер билан боғланиб барча саволларингизга жавоб олишингиз мумкин</p>
                 <button class="question__info-btn">
                     <img src="./images/telegram.svg" alt="telegram" width="24" height="24" loading="lazy">

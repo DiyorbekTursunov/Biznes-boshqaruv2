@@ -133,6 +133,7 @@ body {
     }
     .main__container{
         padding: 40px 20px;
+        padding-bottom: 0;
     }
 }
 
