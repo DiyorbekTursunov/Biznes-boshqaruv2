@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log(phoneInput);
 
-
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -123,14 +122,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelectorAll('.hero__button').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default to handle manually
-        const formSection = document.querySelector('#form');
-        if (formSection) {
-            formSection.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            console.error('Section with id="form" not found');
-        }
-    });
+document.querySelectorAll(".hero__button").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default to handle manually
+    const formSection = document.querySelector("#form");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error('Section with id="form" not found');
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const logosContainer = document.querySelector(".partners__logos");
+  const logoTrack = document.querySelector(".logo-track");
+
+  // Ensure at least two tracks for seamless looping
+  if (logoTrack && logosContainer) {
+    const clone = logoTrack.cloneNode(true);
+    logosContainer.appendChild(clone);
+  }
 });

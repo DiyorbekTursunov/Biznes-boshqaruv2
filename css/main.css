@@ -122,30 +122,31 @@ body {
 
 .partners__logos {
   display: flex;
-  align-items: center;
-  animation: scroll 10s linear infinite;
-  gap: 60px;
-  padding: 20px 0;
   overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
 }
 
-.partners__logos:hover {
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  animation: scroll 20s linear infinite;
+}
+
+.logo-track img {
+  height: 90px; /* Adjust based on your design */
+  object-fit: contain;
+}
+
+.partners__logos:hover .logo-track {
   animation-play-state: paused;
 }
 
-.partners__logos img:hover {
+.logo-track img:hover {
   opacity: 1;
   transform: scale(1.1);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
+  transition: transform 0.3s ease;
 }
 
 .logos-wrapper {
@@ -158,6 +159,27 @@ body {
     white 80%,
     transparent
   );
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-track {
+    gap: 30px;
+  }
+  .logo-track img {
+    height: 70px;
+  }
+  .testimonials__title {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -524,6 +546,11 @@ body {
   right: 8px;
   bottom: 0;
 }
+.programs__item__img_1 {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+}
 @media screen and (max-width: 950px) {
   .programs__container {
     border-radius: 10px;
@@ -551,5 +578,6 @@ body {
   }
   .programs__item__img {
     left: 50%;
+    bottom: 10px;
   }
 }
