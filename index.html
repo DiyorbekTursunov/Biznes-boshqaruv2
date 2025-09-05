@@ -1,20 +1,856 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Critical CSS inlined for immediate rendering -->
     <style>
-        *{box-sizing:border-box;margin:0;padding:0}.wrapper,body{background-color:#000;font-family:sans-serif}.hero__button,.hero__title,.subtitle__highlight{font-weight:700}.hero__person,.hero__person-img,.mobile{position:relative}body{color:#fff}.container{max-width:1160px;margin:0 auto}.wrapper{padding-top:10px;background-position:center;background-size:cover;background-repeat:no-repeat}.header{margin:0 10px 10px}.header-container{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;backdrop-filter:blur(100px);border:1px solid #fff;border-radius:10px}.header__contact,.header__date-info{display:flex;flex-direction:column}.header__date-info{justify-content:center}.header__contact-icon,.header__date-label{font-size:12px;margin-bottom:8px}.header__date-label{text-align:center}.header__contact-icon{text-align:end}.header__date-value,.header__phone{font-weight:700;font-size:20px;color:#fcca4c}.header__phone{text-decoration:none}.header__logo{display:flex}.hero{margin:0 10px}.hero-container{display:flex;gap:60px;align-items:end}.hero__content{display:flex;flex-direction:column;align-items:start}.hero__title{font-size:56px;line-height:150%;margin-bottom:8px}.hero__highlight{background:url("../images/hero-highlight.avif") 0 0/contain no-repeat;font-style:italic;padding:5px 10px 13px 5px}.hero__subtitle{font-size:32px;line-height:150%;margin-bottom:35px}.hero__button{background:#fcca4c;color:#000;padding:43px;width:100%;max-width:380px;border-radius:15px;border:none;cursor:pointer;font-size:24px;letter-spacing:10%}.mobile{display:none;margin:-55px auto 0;z-index:3}.hero__person-img{width:100%;max-width:444px;height: 396px; z-index:2}.supported{background-color:#000;padding-top:80px;padding-bottom:80px}.supported__title{font-size:48px;text-align:center;color:white;margin-bottom:40px}.supported__box{display:flex;align-items:center;gap:40px}.testimonials{padding-bottom:80px;background-color:#000}.testimonials__title{font-size:48px;text-align:center;color:white;margin-bottom:40px}.testimonials__box{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;justify-content:center}.question{padding:80px 20px 154px;background-color:#000;color:white}.question__container{display:flex;align-items:center;justify-content:space-between;background-color:#222;border:1px solid #fff;border-radius:10px;padding:40px}.question__info-title{color:#fcb322;font-size:36px}.question__info-text{font-size:22.5px;color:white;max-width:509px;margin-bottom:40px}.question__info-btn{display:flex;align-items:center;gap:10px;background-color:#1466f2;border-radius:8px;padding:20px;max-width:300px;width:100%;color:white;justify-content:center}.question__form{background-color:white;border-radius:12px;padding:40px 51px 27px 47px}.question__form-title{font-family:sans-serif;font-size:20px;text-align:center;color:#353535;margin-bottom:12px}.question__form-inp{background-color:#f2f2f2;padding:19px;border:none;outline:none;border-radius:6.89px}.question__form-card{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}.question__form-btn{color:#000;font-family:sans-serif;font-size:24px;text-align:center;padding:22px 46px 21px 47px;max-width:301px;width:100%;border-radius:6.89px;background-color:#ffca7b}@media (max-width:1200px){.supported__box{flex-wrap:wrap;justify-content:center}.supported__title{font-size:40px;line-height:140%}.supported__title>span{color:#fccc50}.testimonials__title{font-size:40px;line-height:140%}.testimonials__title>span{color:#fccc50}.testimonials__box{grid-template-columns:1fr 1fr 1fr}}@media (max-width:1024px){.supported__title{font-size:35px}.testimonials__title{font-size:30px}.supported__img{width:180px;height:180px}.testimonials__box{grid-template-columns:1fr 1fr;max-width:600px;margin:0 auto}.question__container{flex-direction:column;padding:20px}.question__info{margin-bottom:30px;text-align:center}.question__form{width:100%}.question__form-btn{margin:0 auto;display:flex;justify-content:center;font-size:19px;max-width:100%}.users__row{flex-wrap:wrap;justify-content:center}.question__form-title{font-size:16px}.question__info-title{font-size:32px}.question__info-text{font-size:20px;margin-bottom:16px}.question__info-btn{margin:0 auto}.users__col-title{color:#fcb322}}@media (max-width:768px){.supported__title,.testimonials__title{font-size:30px;margin-bottom:20px}.supported__img{width:160px;height:160px}.testimonials__box{grid-template-columns:1fr;max-width:300px;margin:0 auto}.carousel{width:100%;max-width:1000px;overflow:hidden}.track{display:flex;gap:20px;animation:scroll 3s linear infinite;flex-wrap:nowrap}.track img{width:100px;height:100px;border-radius:10px;object-fit:cover}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}} .users__title{font-size:32px}.users__col-title{font-size:49px}.users__col-subtitle{font-size:16px}.users__col-list{font-size:10px}.users__title>span{color:#fccc50}}@media screen and (max-width:568px){.header__logo{display:none}.header__date-value,.header__phone{font-size:18px}.header__contact-icon,.header__date-label{margin-bottom:4px}}@media screen and (max-width:950px){.hero-container{gap:30px}.hero__title{font-size:40px}.hero__subtitle{font-size:24px;margin-bottom:20px}.hero__button{padding:30px;font-size:20px;max-width:300px}.hero__person-img{max-width:350px}}@media screen and (max-width:600px){.desctop{display:none}.mobile{display:block}.header{margin-bottom:40px}.hero-container{flex-direction:column;align-items:center;text-align:center;gap:0}.hero__content{align-items:center}.hero__title{font-size:32px}.hero__subtitle{font-size:20px;margin-bottom:0}.hero__button{padding:25px;font-size:18px;max-width:280px}.hero__person-img{max-width:300px;margin-top:20px}.hero__subtitle{font-size:18px}}@media screen and (max-width:350px){.header__date-value,.header__phone{font-size:14px}.hero__title{font-size:28px}.header__contact-icon,.header__date-label{margin-bottom:4px;font-size:10px}.hero__highlight{padding:6px 15px 6px 6px;width:100%}.hero__subtitle{font-size:16px}}.supported__container,.testimonials__container,.question__container{max-width:1160px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}.supported__title,.testimonials__title,.question__info-title{font-family:Arial,sans-serif;font-weight:700;line-height:150%;letter-spacing:0%;text-transform:uppercase}button{cursor:pointer;border:none;border-radius:6px}.users{padding-top:85px;padding-bottom:80px;background-color:#000;color:white}.users__container{max-width:1160px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}.users__title{font-family:Arial,sans-serif;font-weight:700;font-size:48px;line-height:150%;letter-spacing:0%;text-align:center;text-transform:uppercase;margin-bottom:38px}.users__row{display:flex;align-items:center;gap:40px}.users__col{background-color:#222;padding:25px 10px 30px 24px;border-radius:10px;max-width:360px}.users__cols{background-color:#222;padding:45px 10px 18px 24px;border-radius:10px;max-width:360px}.users__colss{background-color:#222;padding:48px 10px 41px 24px;border-radius:10px;max-width:360px}.users__col-title{font-family:Arial,sans-serif;font-weight:700;font-size:56px;line-height:150%;letter-spacing:0%;text-transform:uppercase;margin-top:-90px;margin-bottom:6px}.user-tit{margin-top:-70px}.users__col-subtitle{font-family:Arial,sans-serif;font-weight:700;font-size:18px;line-height:150%;letter-spacing:0%;text-transform:uppercase;margin-bottom:8px}.users__col-subtitles{font-family:Arial,sans-serif;font-weight:700;font-size:18px;line-height:150%;letter-spacing:0%;text-transform:uppercase;width:100%}.users__col-list{font-family:Arial,sans-serif;font-weight:400;font-size:12px;line-height:150%;letter-spacing:0%}.track{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.testimonials__card{border:1px solid #fff;display:flex;justify-content:center;align-items:center;border-radius:10px}@media (max-width:600px){.wrapper{background-image:url("./images/main-person-mobile.avif")}}@media (min-width:601px){.wrapper{background-image:url("./images/desctop-main.avif")}}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        .wrapper,
+        body {
+            background-color: #000;
+            font-family: sans-serif
+        }
+
+        .hero__button,
+        .hero__title,
+        .subtitle__highlight {
+            font-weight: 700
+        }
+
+        .hero__person,
+        .hero__person-img,
+        .mobile {
+            position: relative
+        }
+
+        body {
+            color: #fff
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto
+        }
+
+        .wrapper {
+            padding-top: 10px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .header {
+            margin: 0 10px 10px
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            backdrop-filter: blur(100px);
+            border: 1px solid #fff;
+            border-radius: 10px
+        }
+
+        .header__contact,
+        .header__date-info {
+            display: flex;
+            flex-direction: column
+        }
+
+        .header__date-info {
+            justify-content: center
+        }
+
+        .header__contact-icon,
+        .header__date-label {
+            font-size: 12px;
+            margin-bottom: 8px
+        }
+
+        .header__date-label {
+            text-align: center
+        }
+
+        .header__contact-icon {
+            text-align: end
+        }
+
+        .header__date-value,
+        .header__phone {
+            font-weight: 700;
+            font-size: 20px;
+            color: #fcca4c
+        }
+
+        .header__phone {
+            text-decoration: none
+        }
+
+        .header__logo {
+            display: flex
+        }
+
+        .hero {
+            margin: 0 10px
+        }
+
+        .hero-container {
+            display: flex;
+            gap: 60px;
+            align-items: end
+        }
+
+        .hero__content {
+            display: flex;
+            flex-direction: column;
+            align-items: start
+        }
+
+        .hero__title {
+            font-size: 56px;
+            line-height: 150%;
+            margin-bottom: 8px
+        }
+
+        .hero__highlight {
+            background: url("../images/hero-highlight.avif") 0 0/contain no-repeat;
+            font-style: italic;
+            padding: 5px 10px 13px 5px
+        }
+
+        .hero__subtitle {
+            font-size: 32px;
+            line-height: 150%;
+            margin-bottom: 35px
+        }
+
+        .hero__button {
+            background: #fcca4c;
+            color: #000;
+            padding: 43px;
+            width: 100%;
+            max-width: 380px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            letter-spacing: 10%
+        }
+
+        .mobile {
+            display: none;
+            margin: -55px auto 0;
+            z-index: 3
+        }
+
+        .hero__person-img {
+            width: 100%;
+            max-width: 444px;
+            height: 396px;
+            z-index: 2
+        }
+
+        .supported {
+            background-color: #000;
+            padding-top: 80px;
+            padding-bottom: 80px
+        }
+
+        .supported__title {
+            font-size: 48px;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px
+        }
+
+        .supported__box {
+            display: flex;
+            align-items: center;
+            gap: 40px
+        }
+
+        .testimonials {
+            padding-bottom: 80px;
+            background-color: #000
+        }
+
+        .testimonials__title {
+            font-size: 48px;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px
+        }
+
+        .testimonials__box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 14px;
+            justify-content: center
+        }
+
+        .question {
+            padding: 80px 20px 154px;
+            background-color: #000;
+            color: white
+        }
+
+        .question__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #222;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 40px
+        }
+
+        .question__info-title {
+            color: #fcb322;
+            font-size: 36px
+        }
+
+        .question__info-text {
+            font-size: 22.5px;
+            color: white;
+            max-width: 509px;
+            margin-bottom: 40px
+        }
+
+        .question__info-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1466f2;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 300px;
+            width: 100%;
+            color: white;
+            justify-content: center
+        }
+
+        .question__form {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px 51px 27px 47px
+        }
+
+        .question__form-title {
+            font-family: sans-serif;
+            font-size: 20px;
+            text-align: center;
+            color: #353535;
+            margin-bottom: 12px
+        }
+
+        .question__form-inp {
+            background-color: #f2f2f2;
+            padding: 19px;
+            border: none;
+            outline: none;
+            border-radius: 6.89px
+        }
+
+        .question__form-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px
+        }
+
+        .question__form-btn {
+            color: #000;
+            font-family: sans-serif;
+            font-size: 24px;
+            text-align: center;
+            padding: 22px 46px 21px 47px;
+            max-width: 301px;
+            width: 100%;
+            border-radius: 6.89px;
+            background-color: #ffca7b
+        }
+
+        @media (max-width:1200px) {
+            .supported__box {
+                flex-wrap: wrap;
+                justify-content: center
+            }
+
+            .supported__title {
+                font-size: 40px;
+                line-height: 140%
+            }
+
+            .supported__title>span {
+                color: #fccc50
+            }
+
+            .testimonials__title {
+                font-size: 40px;
+                line-height: 140%
+            }
+
+            .testimonials__title>span {
+                color: #fccc50
+            }
+
+            .testimonials__box {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+        }
+
+        @media (max-width:1024px) {
+            .supported__title {
+                font-size: 35px
+            }
+
+            .testimonials__title {
+                font-size: 30px
+            }
+
+            .supported__img {
+                width: 180px;
+                height: 180px
+            }
+
+            .testimonials__box {
+                grid-template-columns: 1fr 1fr;
+                max-width: 600px;
+                margin: 0 auto
+            }
+
+            .question__container {
+                flex-direction: column;
+                padding: 20px
+            }
+
+            .question__info {
+                margin-bottom: 30px;
+                text-align: center
+            }
+
+            .question__form {
+                width: 100%
+            }
+
+            .question__form-btn {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                font-size: 19px;
+                max-width: 100%
+            }
+
+            .users__row {
+                flex-wrap: wrap;
+                justify-content: center
+            }
+
+            .question__form-title {
+                font-size: 16px
+            }
+
+            .question__info-title {
+                font-size: 32px
+            }
+
+            .question__info-text {
+                font-size: 20px;
+                margin-bottom: 16px
+            }
+
+            .question__info-btn {
+                margin: 0 auto
+            }
+
+            .users__col-title {
+                color: #fcb322
+            }
+        }
+
+        @media (max-width:768px) {
+
+            .supported__title,
+            .testimonials__title {
+                font-size: 30px;
+                margin-bottom: 20px
+            }
+
+            .supported__img {
+                width: 160px;
+                height: 160px
+            }
+
+            .testimonials__box {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                margin: 0 auto
+            }
+
+            .carousel {
+                width: 100%;
+                max-width: 1000px;
+                overflow: hidden
+            }
+
+            .track {
+                display: flex;
+                gap: 20px;
+                flex-wrap: nowrap
+            }
+
+            .track img {
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+                object-fit: cover
+            }
+
+            .users__title {
+                font-size: 32px
+            }
+
+            .users__col-title {
+                font-size: 49px
+            }
+
+            .users__col-subtitle {
+                font-size: 16px
+            }
+
+            .users__col-list {
+                font-size: 10px
+            }
+
+            .users__title>span {
+                color: #fccc50
+            }
+        }
+
+        @media screen and (max-width:568px) {
+            .header__logo {
+                display: none
+            }
+
+            .header__date-value,
+            .header__phone {
+                font-size: 18px
+            }
+
+            .header__contact-icon,
+            .header__date-label {
+                margin-bottom: 4px
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .hero-container {
+                gap: 30px
+            }
+
+            .hero__title {
+                font-size: 40px
+            }
+
+            .hero__subtitle {
+                font-size: 24px;
+                margin-bottom: 20px
+            }
+
+            .hero__button {
+                padding: 30px;
+                font-size: 20px;
+                max-width: 300px
+            }
+
+            .hero__person-img {
+                max-width: 350px
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .desctop {
+                display: none
+            }
+
+            .mobile {
+                display: block
+            }
+
+            .header {
+                margin-bottom: 40px
+            }
+
+            .hero-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 0
+            }
+
+            .hero__content {
+                align-items: center
+            }
+
+            .hero__title {
+                font-size: 32px
+            }
+
+            .hero__subtitle {
+                font-size: 20px;
+                margin-bottom: 0
+            }
+
+            .hero__button {
+                padding: 25px;
+                font-size: 18px;
+                max-width: 280px
+            }
+
+            .hero__person-img {
+                max-width: 300px;
+                margin-top: 20px
+            }
+
+            .hero__subtitle {
+                font-size: 18px
+            }
+        }
+
+        @media screen and (max-width:350px) {
+
+            .header__date-value,
+            .header__phone {
+                font-size: 14px
+            }
+
+            .hero__title {
+                font-size: 28px
+            }
+
+            .header__contact-icon,
+            .header__date-label {
+                margin-bottom: 4px;
+                font-size: 10px
+            }
+
+            .hero__highlight {
+                padding: 6px 15px 6px 6px;
+                width: 100%
+            }
+
+            .hero__subtitle {
+                font-size: 16px
+            }
+        }
+
+        .supported__container,
+        .testimonials__container,
+        .question__container {
+            max-width: 1160px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px
+        }
+
+        .supported__title,
+        .testimonials__title,
+        .question__info-title {
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-transform: uppercase
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            border-radius: 6px
+        }
+
+        .users {
+            padding-top: 85px;
+            padding-bottom: 80px;
+            background-color: #000;
+            color: white
+        }
+
+        .users__container {
+            max-width: 1160px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px
+        }
+
+        .users__title {
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 38px
+        }
+
+        .users__row {
+            display: flex;
+            align-items: center;
+            gap: 40px
+        }
+
+        .users__col {
+            background-color: #222;
+            padding: 25px 10px 30px 24px;
+            border-radius: 10px;
+            max-width: 360px
+        }
+
+        .users__cols {
+            background-color: #222;
+            padding: 45px 10px 18px 24px;
+            border-radius: 10px;
+            max-width: 360px
+        }
+
+        .users__colss {
+            background-color: #222;
+            padding: 48px 10px 41px 24px;
+            border-radius: 10px;
+            max-width: 360px
+        }
+
+        .users__col-title {
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            margin-top: -90px;
+            margin-bottom: 6px
+        }
+
+        .user-tit {
+            margin-top: -70px
+        }
+
+        .users__col-subtitle {
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            margin-bottom: 8px
+        }
+
+        .users__col-subtitles {
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            width: 100%
+        }
+
+        .users__col-list {
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            letter-spacing: 0%
+        }
+
+        .track {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: nowrap
+        }
+
+        .testimonials__card {
+            width: 100%;
+            border: 1px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px
+        }
+        .testimonials__card img{
+            width: 100%;
+        }
+
+        @media (max-width:600px) {
+            .wrapper {
+                background-image: url("./images/main-person-mobile.avif")
+            }
+        }
+
+        @media (min-width:601px) {
+            .wrapper {
+                background-image: url("./images/desctop-main.avif")
+            }
+        }
+
+        .programs {
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
+        .programs__container {
+            color: #222222;
+            padding-top: 40px;
+            padding-bottom: 68px;
+            background-color: #F8F8F2;
+            border-radius: 50px;
+            margin-left: 18px;
+            margin-right: 18px;
+        }
+
+        .programs__title {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 150%;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .programs__box {
+            margin: 0 auto;
+            max-width: 880px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 26px;
+        }
+
+        .program {
+            width: 100%;
+            max-width: 400px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        .programs__day-header {
+            width: 100%;
+            background-color: #EEEEEE;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .programs__day {
+            width: 100%;
+            height: 100%;
+            background: #FCCC50;
+            border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .programs__day_1 {
+            width: 50%;
+            height: 40px;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        .programs__day-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 150%;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .programs__list {
+            position: relative;
+            padding-top: 16px;
+            padding-left: 8px;
+            padding-bottom: 42px;
+            margin-left: 20px;
+            font-size: 12px;
+            line-height: 150%;
+        }
+
+        .programs__item__img {
+            position: absolute;
+            right: 8px;
+            bottom: 0;
+        }
+
+
+
+        @media screen and (max-width:950px) {
+            .programs__container {
+                border-radius: 10px;
+                padding-top: 40px;
+                padding-left: 18px;
+                padding-right: 18px;
+                padding-bottom: 38px;
+            }
+
+            .programs__box {
+                justify-content: center;
+            }
+
+            .programs__title {
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 150%;
+            }
+
+            .program {
+                border: 1px solid #FCCC50;
+            }
+
+            .programs__list {
+                font-size: 9.6px;
+            }
+
+            .programs__title span {
+                background-color: #FCCC50;
+            }
+
+            .programs__item__img {
+                bottom: 10px;
+                left: 50%;
+            }
+        }
     </style>
     <!-- Preload most critical image -->
     <link rel="preload" as="image" href="/images/main-person-desctop.avif" type="image/avif">
     <link rel="preload" as="image" href="./images/hero-highlight.avif">
     <link rel="preload" as="image" href="./images/hero-button-back-ground.avif">
     <link rel="preload" href="./styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="./css/main.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="./css/main.css">
+    </noscript>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
@@ -50,7 +886,8 @@
                     <button class="desctop hero__button">БОҒЛАНИШ</button>
                 </div>
                 <div class="hero__person">
-                    <img class="hero__person-img" decoding="async" src="./images/main-person-desctop.avif" alt="Мухамедов Абдулазиз" width="444" height="550" loading="eager">
+                    <img class="hero__person-img" decoding="async" src="./images/main-person-desctop.avif"
+                        alt="Мухамедов Абдулазиз" width="444" height="550" loading="eager">
                     <button class="mobile hero__button">БОҒЛАНИШ</button>
                 </div>
             </div>
@@ -63,20 +900,110 @@
                 <div class="users__col">
                     <h3 class="users__col-title user-tit">01</h3>
                     <h4 class="users__col-subtitle">Соф фойдасини оширмоқчи бўлганлар учун</h4>
-                    <li class="users__col-list">Таннархни камайтириб, махсулотингизни бозорда янада рақобатбардош қилишни истайсизми?</li>
-                    <li class="users__col-list">Операцион харажатларни кискартириб, соф фойдангизни оширишни хохлайсизми?</li>
+                    <li class="users__col-list">Таннархни камайтириб, махсулотингизни бозорда янада рақобатбардош
+                        қилишни истайсизми?</li>
+                    <li class="users__col-list">Операцион харажатларни кискартириб, соф фойдангизни оширишни
+                        хохлайсизми?</li>
                 </div>
                 <div class="users__cols">
                     <h3 class="users__col-title">02</h3>
                     <h4 class="users__col-subtitles">Бизнесини тизимлаштирмоқчи бўлганлар учун</h4>
-                    <li class="users__col-list">Бўлимлар ва ходимлар кўпайгани сайин, “хаос” ҳам ортмоқда. Иш жараёнлари сизнинг доимий иштирокингизсиз ҳам силлиқ юришини истайсизми?</li>
-                    <li class="users__col-list">Бизнесингиз ҳар бир жараёнини рақамларда кузатиб, ходимлар қўли билан доимий такомиллаштирмоқчисимиз?</li>
+                    <li class="users__col-list">Бўлимлар ва ходимлар кўпайгани сайин, “хаос” ҳам ортмоқда. Иш жараёнлари
+                        сизнинг доимий иштирокингизсиз ҳам силлиқ юришини истайсизми?</li>
+                    <li class="users__col-list">Бизнесингиз ҳар бир жараёнини рақамларда кузатиб, ходимлар қўли билан
+                        доимий такомиллаштирмоқчисимиз?</li>
                 </div>
                 <div class="users__colss">
                     <h3 class="users__col-title">03</h3>
                     <h4 class="users__col-subtitle">Бизнесини масштаблаштирмоқчи бўлган тадбиркорлар учун</h4>
                     <li class="users__col-list">Бизнесингизни кенгайтирмоқчисиз, лекин ходимлар тайёр эмасми?</li>
-                    <li class="users__col-list">Менежерларингиз бўлимни автоном бошқариб, доимий такомиллаштиришини истайсизми?</li>
+                    <li class="users__col-list">Менежерларингиз бўлимни автоном бошқариб, доимий такомиллаштиришини
+                        истайсизми?</li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="programs">
+        <div class="programs__container">
+            <h2 class="programs__title"><span>2 КУНЛИК</span> ТРЕНИНГ ДАСТУРИ</h2>
+
+            <div class="programs__box">
+                <div class="program">
+                    <div class="programs__day-header">
+                        <span class="programs__day-title">1- КУН</span>
+                        <div class="programs__day_1 programs__day">
+                        </div>
+                    </div>
+
+                    <ul class="programs__list">
+                        <li class="programs__item">
+                            Компаниянинг ҳаёт цикли
+                        </li>
+                        <li class="programs__item">
+                            Операцион бошқарув
+                        </li>
+
+                        <li class="programs__item">
+                            Бизнес жараёнларни BPMN 2.0 бўйича хариталаш
+                        </li>
+
+                        <li class="programs__item">
+                            Амалий машғулот: Савдо, HR ва ишлаб чиқариш бўлими жараёнларини хариталаш ва
+                            оптималлаштириш
+                        </li>
+
+                        <li class="programs__item">
+                            Доимий такомиллаштириш (PDCA цикли)
+                        </li>
+
+                        <li class="programs__item">
+                            Амалий машғулот: PDCA цикли ёрдамида давомий такомиллаштириш
+                        </li>
+                        <li class="programs__item">
+                            Aмалий машғулот: Ишлаб чиқариш симуляцияси (1- ва 2-тур)
+                        </li>
+                        <img class="programs__item__img" src="./images/01.png" alt="">
+                    </ul>
+                </div>
+
+                <div class="program">
+                    <div class="programs__day-header">
+                        <div class="programs__day">
+                            <span class="programs__day-title">2- КУН</span>
+                        </div>
+                    </div>
+
+                    <ul class="programs__list">
+                        <li class="programs__item">
+                            Кайзен асослари
+                        </li>
+                        <li class="programs__item">
+                            Қиймат тушунчаси
+                        </li>
+
+                        <li class="programs__item">
+                            Жараёнлардаги 8 турдаги йўқотиш
+                        </li>
+
+                        <li class="programs__item">
+                            Кайдзеннинг 10 тамойили
+                        </li>
+
+                        <li class="programs__item">
+                            Жараёнларни стандартлаштириш
+                        </li>
+
+                        <li class="programs__item">
+                            Амалий машғулот: Ишлаб чиқариш симуляцияси (3- ва 4-тур)
+                        </li>
+                        <li class="programs__item">
+                            Корхонада Кайдзенни жорий этиш стратегияси
+                        </li>
+                        <li class="programs__item">
+                            Компанияда рақамлаштириш лойиҳаларини амалга ошириш
+                        </li>
+                        <img class="programs__item__img" src="./images/02.png" alt="">
+                    </ul>
                 </div>
             </div>
         </div>
@@ -107,16 +1034,24 @@
             <h2 class="testimonials__title">ДАСТУР ҲАҚИДА <span>ИШТИРОКЧИЛАР ФИКРИ</span></h2>
             <div class="testimonials__box">
                 <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images" data-video="https://www.youtube.com/watch?v=j6oFjT1ufG8" width="280" height="402" loading="lazy">
+                    <img src="./images/images.avif" alt="images"
+                        data-video="https://www.youtube.com/watch?v=j6oFjT1ufG8" width="280" height="402"
+                        loading="lazy">
                 </div>
                 <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images" data-video="https://www.youtube.com/watch?v=iK7UUHOfPeA" width="280" height="402" loading="lazy">
+                    <img src="./images/images.avif" alt="images"
+                        data-video="https://www.youtube.com/watch?v=iK7UUHOfPeA" width="280" height="402"
+                        loading="lazy">
                 </div>
                 <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images" data-video="https://www.youtube.com/watch?v=LKogJpqsejw" width="280" height="402" loading="lazy">
+                    <img src="./images/images.avif" alt="images"
+                        data-video="https://www.youtube.com/watch?v=LKogJpqsejw" width="280" height="402"
+                        loading="lazy">
                 </div>
                 <div class="testimonials__card">
-                    <img src="./images/images.avif" alt="images" data-video="https://www.youtube.com/watch?v=lu8Y01biVmo" width="280" height="402" loading="lazy">
+                    <img src="./images/images.avif" alt="images"
+                        data-video="https://www.youtube.com/watch?v=lu8Y01biVmo" width="280" height="402"
+                        loading="lazy">
                 </div>
             </div>
         </div>
@@ -180,4 +1115,5 @@
         });
     </script>
 </body>
+
 </html>
