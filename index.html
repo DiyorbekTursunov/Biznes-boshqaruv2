@@ -8,15 +8,24 @@
 
     <!-- Critical CSS inlined for immediate rendering -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Arial", sans-serif
+        .wrapper,
+        body {
+            background-color: #000
+        }
+
+        .hero__button,
+        .hero__title,
+        .subtitle__highlight {
+            font-weight: 700
+        }
+
+        .hero__person,
+        .hero__person-img,
+        .mobile {
+            position: relative
         }
 
         body {
-            background-color: #000;
             color: #fff
         }
 
@@ -26,8 +35,7 @@
         }
 
         .wrapper {
-            padding-top: 10px;
-            background-color: #000
+            padding-top: 10px
         }
 
         .header {
@@ -44,8 +52,8 @@
             border-radius: 10px
         }
 
-        .header__date-info,
-        .header__contact {
+        .header__contact,
+        .header__date-info {
             display: flex;
             flex-direction: column
         }
@@ -54,8 +62,8 @@
             justify-content: center
         }
 
-        .header__date-label,
-        .header__contact-icon {
+        .header__contact-icon,
+        .header__date-label {
             font-size: 12px;
             margin-bottom: 8px
         }
@@ -100,27 +108,21 @@
         }
 
         .hero__title {
-            font-weight: 700;
             font-size: 56px;
             line-height: 150%;
             margin-bottom: 8px
         }
 
         .hero__highlight {
-            background: url("../images/hero-highlight.avif") no-repeat;
+            background: url("../images/hero-highlight.avif") 0 0/contain no-repeat;
             font-style: italic;
-            background-size: contain;
-            padding: 5px 10px 13px 5px;
+            padding: 5px 10px 13px 5px
         }
 
         .hero__subtitle {
             font-size: 32px;
             line-height: 150%;
             margin-bottom: 35px
-        }
-
-        .subtitle__highlight {
-            font-weight: 700
         }
 
         .hero__button {
@@ -132,27 +134,19 @@
             border-radius: 15px;
             border: none;
             cursor: pointer;
-            font-weight: 700;
             font-size: 24px;
             letter-spacing: 10%
         }
 
         .mobile {
-            position: relative;
             display: none;
-            margin: 0 auto;
-            margin-top: -55px;
+            margin: -55px auto 0;
             z-index: 3
-        }
-
-        .hero__person {
-            position: relative
         }
 
         .hero__person-img {
             width: 100%;
             max-width: 444px;
-            position: relative;
             z-index: 2
         }
 
@@ -170,8 +164,8 @@
                 font-size: 18px
             }
 
-            .header__date-label,
-            .header__contact-icon {
+            .header__contact-icon,
+            .header__date-label {
                 margin-bottom: 4px
             }
         }
@@ -257,26 +251,25 @@
                 font-size: 28px
             }
 
-            .header__date-label,
-            .header__contact-icon {
+            .header__contact-icon,
+            .header__date-label {
                 margin-bottom: 4px;
                 font-size: 10px
             }
 
             .hero__highlight {
-                padding: 6px;
-                padding-right: 15px;
+                padding: 6px 15px 6px 6px;
                 width: 100%
             }
         }
     </style>
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-
     <!-- Preload most critical image -->
-    <link rel="preload" as="image" href="./images/main-person-desctop.avif">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preload" as="image" href="/images/main-person-desctop.avif" type="image/avif">
+    <link rel="preload" href="./styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./styles/main.css">
+    </noscript>
 </head>
 
 <body>
@@ -318,8 +311,8 @@
                 </div>
 
                 <div class="hero__person">
-                    <img class="hero__person-img" src="./images/main-person-desctop.avif" alt="Мухамедов Абдулазиз"
-                        width="444" loading="eager">
+                    <img class="hero__person-img" decoding="async" src="./images/main-person-desctop.avif"
+                        alt="Мухамедов Абдулазиз" width="444" loading="eager">
                     <button class="mobile hero__button">БОҒЛАНИШ</button>
                 </div>
             </div>
