@@ -7,334 +7,7 @@
     <title>Document</title>
     <!-- Critical CSS inlined (only for above-the-fold: body, wrapper, header, hero, and essential media queries) -->
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0
-        }
-
-        .wrapper,
-        body {
-            background-color: #000;
-            font-family: sans-serif
-        }
-
-        .hero__button,
-        .hero__title,
-        .subtitle__highlight {
-            text-decoration: none;
-            font-weight: 700;
-            position: relative;
-            z-index: 99999;
-            pointer-events: auto;
-            /* Ensure clicks are registered */
-        }
-
-        .hero__person,
-        .hero__person-img,
-        .mobile {
-            position: relative;
-        }
-
-        body {
-            color: #fff
-        }
-
-        .container {
-            max-width: 1160px;
-            margin: 0 auto
-        }
-
-        .wrapper {
-            padding-top: 10px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* z-index: -1; */
-            position: relative;
-        }
-
-        .liner-bg {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 2;
-        }
-
-        .hero__person-img-mobile {
-            display: none;
-        }
-
-        .header {
-            margin: 0 10px 10px
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 25px;
-            backdrop-filter: blur(100px);
-            border: 1px solid #fff;
-            border-radius: 10px
-        }
-
-        .header__contact,
-        .header__date-info {
-            display: flex;
-            flex-direction: column
-        }
-
-        .header__date-info {
-            justify-content: center
-        }
-
-        .header__contact-icon,
-        .header__date-label {
-            font-size: 12px;
-            margin-bottom: 8px
-        }
-
-        .header__date-label {
-            text-align: center
-        }
-
-        .header__contact-icon {
-            text-align: end
-        }
-
-        .header__date-value,
-        .header__phone {
-            font-weight: 700;
-            font-size: 20px;
-            color: #fcca4c
-        }
-
-        .header__phone {
-            text-decoration: none
-        }
-
-        .header__logo {
-            display: flex
-        }
-
-        .hero {
-            margin: 0 10px;
-        }
-
-        .hero-container {
-            display: flex;
-            gap: 60px;
-            align-items: end
-        }
-
-        .hero__content {
-            display: flex;
-            flex-direction: column;
-            align-items: start
-        }
-
-        .hero__title {
-            font-size: 56px;
-            line-height: 150%;
-            margin-bottom: 8px
-        }
-
-        .hero__highlight {
-            background: url("../images/hero-highlight.avif") 0 0/contain no-repeat;
-            font-style: italic;
-            padding: 5px 10px 13px 5px
-        }
-
-        .hero__subtitle {
-            max-width: 520px;
-            font-size: 28px;
-            line-height: 150%;
-            margin-bottom: 35px
-        }
-
-        .hero__button {
-            background: #fcca4c;
-            color: #000;
-            padding: 43px;
-            width: 100%;
-            max-width: 380px;
-            border-radius: 15px;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            letter-spacing: 10%
-        }
-
-        .mobile {
-            display: none;
-            margin: -55px auto 0;
-            z-index: 3
-        }
-
-        .hero__person-img {
-            width: 100%;
-            max-width: 444px;
-            height: 396px;
-            z-index: 2;
-            object-fit: contain;
-        }
-
-        .desctop {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @media screen and (max-width:568px) {
-            .header__logo {
-                display: none
-            }
-
-            .header__date-value,
-            .header__phone {
-                font-size: 18px
-            }
-
-            .header__contact-icon,
-            .header__date-label {
-                margin-bottom: 4px
-            }
-        }
-
-        @media screen and (max-width:950px) {
-            .hero-container {
-                gap: 30px
-            }
-
-            .hero__title {
-                font-size: 40px
-            }
-
-            .hero__subtitle {
-                font-size: 24px;
-                margin-bottom: 20px
-            }
-
-            .hero__button {
-                padding: 30px;
-                font-size: 20px;
-                max-width: 300px
-            }
-
-            .hero__person-img {
-                display: none;
-            }
-
-            .hero__person-img-mobile {
-                display: block;
-                width: 100%;
-                max-width: 400px;
-                height: auto;
-                object-fit: contain;
-            }
-
-            .users__title {
-                font-size: 32px !important
-            }
-        }
-
-        @media screen and (max-width:600px) {
-            .desctop {
-                display: none
-            }
-
-            .mobile {
-                display: block
-            }
-
-            .header {
-                margin-bottom: 10px
-            }
-
-            .hero-container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 0
-            }
-
-            .hero__content {
-                align-items: center
-            }
-
-            .hero__title {
-                font-size: 32px
-            }
-
-            .hero__subtitle {
-                font-size: 20px;
-                margin-bottom: 0
-            }
-
-            .hero__button {
-                padding: 25px;
-                font-size: 18px;
-                max-width: 280px
-            }
-
-            .hero__person-img {
-                max-width: 500px;
-                margin-top: 20px
-            }
-
-            .hero__subtitle {
-                max-width: 500px;
-                font-size: 13px;
-                margin-bottom: 15px;
-            }
-        }
-
-        @media screen and (max-width:350px) {
-
-            .header__date-value,
-            .header__phone {
-                font-size: 14px
-            }
-
-            .hero__title {
-                font-size: 28px
-            }
-
-            .header__contact-icon,
-            .header__date-label {
-                margin-bottom: 4px;
-                font-size: 10px
-            }
-
-            .hero__highlight {
-                padding: 6px 15px 6px 6px;
-                width: 100%
-            }
-
-            .hero__subtitle {
-                font-size: 16px
-            }
-        }
-
-        button {
-            cursor: pointer;
-            border: none;
-            border-radius: 6px
-        }
-
-        @media (max-width:600px) {
-            .wrapper {
-                background-image: url("./images/main-person-mobile.avif");
-            }
-        }
-
-        @media (min-width:601px) {
-            .wrapper {
-                background-image: url("./images/desctop-main.avif")
-            }
-        }
+        .hero__person,.hero__person-img,.mobile,.wrapper{position:relative}.wrapper,body{background-color:#000;font-family:sans-serif}.hero__button,.hero__title,.subtitle__highlight{text-decoration:none;font-weight:700;position:relative;z-index:99999;pointer-events:auto}.hero__person{width:100%}body{color:#fff}.container{max-width:1160px;margin:0 auto}.wrapper{padding-top:10px;background-position:center;background-size:cover;background-repeat:no-repeat}.liner-bg{position:absolute;bottom:0;left:0;width:100%;z-index:2}.hero__person-img-mobile{display:none}.header{margin:0 10px 10px}.header-container{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;backdrop-filter:blur(100px);border:1px solid #fff;border-radius:10px}.header__contact,.header__date-info{display:flex;flex-direction:column}.header__date-info{justify-content:center}.header__contact-icon,.header__date-label{font-size:12px;margin-bottom:8px}.header__date-label{text-align:center}.header__contact-icon{text-align:end}.header__date-value,.header__phone{font-weight:700;font-size:20px;color:#fcca4c}.header__phone{text-decoration:none}.header__logo{display:flex}.hero{margin:0 10px}.hero-container{display:flex;gap:60px;align-items:end}.hero__content{display:flex;flex-direction:column;align-items:start}.hero__title{font-size:56px;line-height:150%;margin-bottom:8px}.hero__highlight{background:url("../images/hero-highlight.avif") 0 0/contain no-repeat;font-style:italic;padding:5px 10px 13px 5px}.hero__subtitle{max-width:520px;font-size:28px;line-height:150%;margin-bottom:35px}.hero__button{background:#fcca4c;color:#000;padding:43px;width:100%;max-width:380px;border-radius:15px;border:none;cursor:pointer;font-size:24px;letter-spacing:10%}.mobile{display:none;margin:-55px auto 0;z-index:3}.hero__person-img{width:100%;max-width:444px;height:396px;z-index:2;object-fit:contain}.hero__person-info{position:absolute;top:40px;left:20px;justify-content:center;align-items:start;background:url("./images/hero-person-back.avif") center/cover no-repeat;width:165px;height:165px;z-index:0;display:none;padding:10px}.hero__person-stats{width:200px;margin-left:15px}.hero__person-stat{text-align:left;font-size:10px}.hero__person-stat span{font-weight:700}.hero__person-icon{display:flex;gap:8px;margin-bottom:5px}.hero__person-back{display:flex;justify-content:center}.desctop{display:flex;justify-content:center;align-items:center}@media screen and (max-width:568px){.header__logo{display:none}.header__date-value,.header__phone{font-size:18px}.header__contact-icon,.header__date-label{margin-bottom:4px}}@media screen and (max-width:950px){.hero__person-info{display:block}.hero-container{gap:30px}.hero__title{font-size:40px}.hero__subtitle{font-size:24px;margin-bottom:20px}.hero__button{padding:30px;font-size:20px;max-width:300px}.hero__person-img{display:none}.hero__person-img-mobile{display:block;width:100%;max-width:250px;height:auto;object-fit:contain;position:relative;z-index:2;margin-left:80px}.users__title{font-size:32px!important}.hero__person-name{font-size:16px}.hero__person-name span{font-style:italic}.liner-bg{height:200px}}@media screen and (max-width:600px){.desctop{display:none}.mobile{display:block}.header{margin-bottom:10px}.hero-container{flex-direction:column;align-items:center;text-align:center;gap:0}.hero__content{align-items:center}.hero__title{font-size:32px}.hero__button{padding:25px;font-size:18px;max-width:280px}.hero__person-img{max-width:500px;margin-top:20px}.hero__subtitle{max-width:500px;font-size:13px;margin-bottom:15px}.hero__person-img-mobile{margin-left:50px}}@media screen and (max-width:350px){.header__date-value,.header__phone{font-size:14px}.hero__title{font-size:28px}.header__contact-icon,.header__date-label{margin-bottom:4px;font-size:10px}.hero__highlight{padding:6px 15px 6px 6px;width:100%}.hero__subtitle{font-size:16px}}button{cursor:pointer;border:none;border-radius:6px}@media (max-width:600px){.wrapper{background-image:url("./images/main-person-mobile.avif")}}@media (min-width:601px){.wrapper{background-image:url("./images/desctop-main.avif")}}
     </style>
     <!-- Preload most critical image -->
     <link rel="preload" as="image" href="./images/main-person-desctop.avif" type="image/avif">
@@ -383,8 +56,43 @@
                 <div class="hero__person">
                     <img class="hero__person-img" decoding="async" src="./images/main-person-desctop.avif"
                         alt="Мухамедов Абдулазиз" width="444" height="550" loading="eager">
-                    <img class="hero__person-img-mobile" decoding="async" src="./images/main-person-desctop2.avif"
-                        alt="Мухамедов Абдулазиз" width="444" height="550" loading="eager">
+                    <div class="hero__person-back">
+                        <div class="hero__person-info">
+                            <div class="hero__person-card">
+                                <div class="hero__person-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18 13C17.06 13 16.19 13.33 15.5 13.88C14.58 14.61 14 15.74 14 17C14 17.75 14.21 18.46 14.58 19.06C15.27 20.22 16.54 21 18 21C19.01 21 19.93 20.63 20.63 20C20.94 19.74 21.21 19.42 21.42 19.06C21.79 18.46 22 17.75 22 17C22 14.79 20.21 13 18 13ZM20.07 16.57L17.94 18.54C17.8 18.67 17.61 18.74 17.43 18.74C17.24 18.74 17.05 18.67 16.9 18.52L15.91 17.53C15.62 17.24 15.62 16.76 15.91 16.47C16.2 16.18 16.68 16.18 16.97 16.47L17.45 16.95L19.05 15.47C19.35 15.19 19.83 15.21 20.11 15.51C20.39 15.81 20.37 16.28 20.07 16.57Z"
+                                            fill="white" />
+                                        <path opacity="0.4"
+                                            d="M21.0901 21.5C21.0901 21.78 20.8701 22 20.5901 22H3.41016C3.13016 22 2.91016 21.78 2.91016 21.5C2.91016 17.36 6.99015 14 12.0002 14C13.0302 14 14.0302 14.14 14.9502 14.41C14.3602 15.11 14.0002 16.02 14.0002 17C14.0002 17.75 14.2101 18.46 14.5801 19.06C14.7801 19.4 15.0401 19.71 15.3401 19.97C16.0401 20.61 16.9702 21 18.0002 21C19.1202 21 20.1302 20.54 20.8502 19.8C21.0102 20.34 21.0901 20.91 21.0901 21.5Z"
+                                            fill="white" />
+                                        <path
+                                            d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                                            fill="white" />
+                                    </svg>
+
+                                    <h2 class="hero__person-name">
+                                        Мухамедов <br> <span>Абдулазиз</span>
+                                    </h2>
+                                </div>
+                                <ul class="hero__person-stats">
+                                    <li class="hero__person-stat">
+                                        <span>30+</span> Консалтинг лойихалари
+                                    </li>
+                                    <li class="hero__person-stat">
+                                        <span>200+</span> Тренинг қатнашчилари
+                                    </li>
+                                    <li class="hero__person-stat">
+                                        <span>80</span> NPS кўрсатгичи
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img class="hero__person-img-mobile" decoding="async" src="./images/main-hero.avif"
+                            alt="Мухамедов Абдулазиз" width="444" height="550" loading="eager">
+                    </div>
                     <a href="#form" class="mobile hero__button">БОҒЛАНИШ</a>
                 </div>
             </div>
