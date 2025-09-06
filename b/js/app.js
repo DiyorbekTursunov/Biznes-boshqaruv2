@@ -8,12 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
   errorMessage.style.marginTop = "5px";
   phoneInput.parentNode.appendChild(errorMessage);
 
+  console.log(phoneInput);
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const nameInput = document.getElementById("nameInput");
     const phoneValue = phoneInput.value.replace(/\D/g, "");
-    const businessInput = document.getElementById("bussinesInput");
+    const businessInput = document.getElementById("businessInput");
 
     // Validate phone number (must be exactly 12 digits including +998)
     if (phoneValue.length !== 12 || !phoneValue.startsWith("998")) {
@@ -118,4 +120,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+
+document.querySelectorAll(".hero__button").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default to handle manually
+    const formSection = document.querySelector("#form");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error('Section with id="form" not found');
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const logosContainer = document.querySelector(".partners__logos");
+  const logoTrack = document.querySelector(".logo-track");
+
+  // Ensure at least two tracks for seamless looping
+  if (logoTrack && logosContainer) {
+    const clone = logoTrack.cloneNode(true);
+    logosContainer.appendChild(clone);
+  }
 });
